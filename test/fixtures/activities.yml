@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 
+  question_id: 
+  answer_id: 
+  correct: false
+  duration: 2014-02-22 10:29:56
+
+two:
+  user_id: 
+  question_id: 
+  answer_id: 
+  correct: false
+  duration: 2014-02-22 10:29:56

@@ -1,0 +1,34 @@
+// Place all the styles related to the Lesson controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$blue-accent: #31a8ac;
+$dark-blue: darken($blue-accent, 30%);
+
+
+.lesson {
+	margin-left: 10%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: "Avenir";
+
+	.lesson-title {
+		font-family: "Avenir";
+		width: 250px;
+		margin-right: 25px;
+	}
+
+
+	.lesson-text {
+			color:$dark-blue;
+			margin-top: 15px;
+			width: 70%;
+			display:inline-block;
+		}
+
+		.player {
+			background-color: $blue-accent;
+			margin-bottom: 50px;
+		}
+
+
+}

@@ -1,0 +1,7 @@
+<% @lessons.each do |lesson | %>
+	<div class="lesson">
+		<h1 class="lesson-title"><%= link_to lesson.name, lesson_path(lesson) %></h1>
+		<p class="lesson-text"><%= lesson.intro %></p>
+	</div>
+<% end %>
+

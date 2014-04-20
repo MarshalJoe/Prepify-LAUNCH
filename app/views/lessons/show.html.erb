@@ -1,0 +1,75 @@
+<div class="lesson">
+	<h1 class="lesson-title"><%= @lesson.name %></h1>
+
+	<div class="large-6 columns">
+		<div class="player">
+	   <video preload="none">
+	      <source type="video/mp4"  src="http://video-js.zencoder.com/oceans-clip.mp4">
+	   </video>
+		</div>
+	</div>
+
+	<script type="text/javascript">$(".player").flowplayer();</script>
+
+
+	<div class="large-5 large-offset-1 columns">
+		<p class="lesson-text"><%= @lesson.conclusion %></p>
+
+		<a class="button" id="start_quiz" href="#" >Take Quiz</a>
+	</div>
+</div>
+
+<div id='question'>
+
+</div>
+<!-- Backbone templaltes for ajaxy rendering -->
+<div id="templates">
+  <script class="question" type="text/template">
+    <div class="row">
+      <div class="columns small-12 medium-8 large-6 centered-small">
+        <div class="question">
+          <p>{{description}}</p>
+          <p>{{equation}}</p>
+        </div>
+        <ol class="questions">
+        <li id="answer_{{answers[0].id}}" class="answer_value"> {{answers[0].value}}
+            <div class="opened"></div>
+          </li>
+          <li id="answer_{{answers[1].id}}" class="answer_value"> {{answers[1].value}}
+            <div class="opened"></div>
+          </li>
+          <li id="answer_{{answers[2].id}}" class="answer_value"> {{answers[2].value}}
+            <div class="opened"></div>
+          </li>
+          <li id="answer_{{answers[3].id}}" class="answer_value"> {{answers[3].value}}
+            <div class="opened"></div>
+          </li>
+
+        </ol>
+      </div>
+    </div>
+  </script>
+  <script class="onGuessed" type="text/template">
+
+      <h3 class="{{exclamation}}">{{exclamation}}!</h3>
+      <p class="show_reason">Explain Why</p>
+      <a class="button {{correctness}}">{{button_text}}</a>
+
+  </script>
+
+</div>
+
+<script>
+  var questionTemplateHtml = $('#templates .question').html();
+  var questionTemplate = _.template(questionTemplateHtml);
+  //
+  var guessTemplateHtml = $('#templates .onGuessed').html();
+  var guessTemplate = _.template(guessTemplateHtml);
+  // insert first question
+  $('#start_quiz').on('click', function () {
+  	console.log("Click");
+  	$('.lesson').remove();
+  	this_lesson.fetch({success: function(){console.log('success'); insertQuestion(1,false)}});
+  });
+</script>
+

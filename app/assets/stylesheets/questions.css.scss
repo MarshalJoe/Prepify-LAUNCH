@@ -1,0 +1,72 @@
+// Place all the styles related to the questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$bodybackground: #f2f2f2;
+$answerdefaultbackground: #f8f8f8;
+
+#question {
+  a.button {
+    background-color: #31a8ac;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+
+  } 
+  .row {
+    margin: 0;
+  }
+  .columns {
+    padding: 0;
+  }
+  max-width: 60%;
+  margin: 0 auto;
+  background: $bodybackground;
+  .question {
+    padding: 2em;
+    p {  
+      color: black;
+      font-size: 1.1em;
+    }
+  }
+  ol {
+    margin: 0;
+    text-align: center;
+    list-style-position: inside;
+    list-style-type: lower-alpha;
+    width: 200%;
+  li {
+    padding: 0.85em;
+
+
+    text-align: center;
+    background-color: $answerdefaultbackground;
+    color: #333333;
+    border-bottom: 1px solid #eee;
+    &:hover {
+      background-color: #e1e1e1;
+      -webkit-box-shadow: inset 1px 1px 5px 1px rgba(0,0,0,0.62);
+      -moz-box-shadow: inset 1px 1px 5px 1px rgba(0,0,0,0.62);
+      box-shadow: inset 1px 1px 5px 1px rgba(0,0,0,0.62);
+    }
+    .Whoops, .Correct {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .Whoops {
+      color: #ff0000;
+    }
+    .Correct {
+      color: #2bb96e;
+    }
+    .show_reason {
+      color: black;
+
+    }
+  }
+  .li.clicked {
+      
+  }
+
+
+}
+}

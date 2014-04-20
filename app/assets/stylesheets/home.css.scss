@@ -1,0 +1,206 @@
+$blue-accent: #31a8ac;
+$home-background: #f2f2f2;
+$light-blue: lighten($blue-accent, 20%);
+$dark-blue: darken($blue-accent, 30%);
+$paragraph-font: "Avenir";
+
+//global styles
+
+main {
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	background-color: $blue-accent;
+}
+
+h1 {
+	color: $blue-accent;
+	font-family: $paragraph-font;
+}
+
+p {
+	color:white;
+}
+
+hr {
+	display: block;
+  position: relative;
+  padding: 0;
+  margin: 8px auto;
+  height: 0;
+  width: 50%;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 2px solid $blue-accent;
+}
+
+
+.title {
+	text-align:center;
+}
+
+.splash-image, .splash-video, .profiles {
+	width: 100%;
+	margin: 0px;
+}
+
+// main splash image, "scantron.jpg"
+
+.splash-image {
+	height: 550px;
+	width: 100%;
+	background: url(image-path('updated-bckgd.png')) no-repeat center center;
+	background-size: cover;
+
+	.header-space {
+		height:100px
+	}
+
+	.logo-box {
+		height: 225px;
+		width:	350px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color:black;
+		border: 1px solid white;
+		vertical-align: middle;
+
+			.text {
+				margin: 50px;
+
+				h1 {
+					text-align: center;
+				}
+
+				p {
+					font-size: 1.25em;
+					position: relative;
+				}
+
+			}
+
+	}
+
+	.footer-box {
+		border: 1px solid white;
+		width: 400px;
+		height:20px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.signup-form {
+		width: 275px;
+		margin-top: 50px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+
+}
+
+// video section
+
+.splash-video {
+	padding-top: 3%;
+	height:600px;
+	color:white;
+	border-bottom: 1px solid gray;
+	border-top: 20px solid $blue-accent;
+
+	p {
+		margin: 25px;
+		font-family: $paragraph-font;
+		color:black;
+	}
+
+	.player {
+		background-color: $blue-accent;
+		height: 300px;	
+	}
+
+}
+
+// student/alumni section
+
+.profile-container {
+	height:600px;
+	text-align: center;
+
+	h1 {
+		padding: 20px;
+		color:$blue-accent;
+	}
+
+	p {
+		color: $dark-blue;
+		font-family: $paragraph-font;
+		margin-top: 20px;
+		width: 60%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.profiles {
+		width: 80%;
+		margin-right: 10%;
+		margin-left: 10%;
+		margin-top: 5%;
+
+		.student-container {
+			display: inline;
+			width: 40%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.student {
+			border-radius: 50%;
+			border: 15px solid $blue-accent;
+			height: 250px;
+			width: 250px;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.name, .high-school, .city {
+			margin: 0px;
+			line-height: 1.25em;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			font-size: .80em;
+			font-family: $paragraph-font;
+		}
+
+		.high-school, .city {
+			color:gray;
+		} 
+
+		.quote {
+			color: $blue-accent;
+			font-size: 1em;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			width: 80%;
+		}
+
+		.bitcoin {
+			margin: 20px;
+		}
+
+	}
+
+}
+
+
+
+
+
